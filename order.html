@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Place a custom cookie order — flavors, quantities, pickup date and time.">
-  <title>Custom Order • The Cookie Girl</title>
+  <meta name="description" content="Custom Order Form">
+  <title>Order • The Cookie Girl</title>
   <link rel="stylesheet" href="project.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+
   <header class="site-header" role="banner">
     <div class="wrapper brand" aria-label="Site brand">
       <div class="brand_logo" aria-hidden="true">cg</div>
       <h1 class="brand_name">The Cookie Girl</h1>
     </div>
+
     <nav class="navbar" role="navigation" aria-label="Primary">
       <ul class="navbar_list wrapper">
         <li><a class="navbar_link" href="index.html">Home</a></li>
         <li><a class="navbar_link" href="about.html">About</a></li>
-        <li><a class="navbar_link" href="order.html" aria-current="page">Order</a></li>
+        <li><a class="navbar_link" href="order.html">Order</a></li>
         <li><a class="navbar_link" href="recipes.html">Recipes</a></li>
         <li><a class="navbar_link" href="contact.html">Contact</a></li>
       </ul>
@@ -26,124 +28,152 @@
   </header>
 
   <main id="main" class="main wrapper" role="main">
-    <h2>Custom Order</h2>
-    <p class="form__hint">
-      Complete the form below to place a custom cookie order.
-      Fields marked with <span aria-hidden="true" class="req">*</span> are required.
-    </p>
+    <section aria-label="Order options" class="grid grid--2">
+      <div>
+        <h2>Custom Order Form</h2>
+        <p>Please send over the details about the desserts needed and when!</p>
 
-    <form method="post" action="https://webdevbasics.net/scripts/demo.php" class="order-form" aria-describedby="order-help">
-      <p id="order-help" class="sr-only">Use this form to submit a custom cookie order. Required fields are marked.</p>
+        <form aria-describedby="order-help">
+          <p id="order-help">Fields marked with * are required.</p>
 
-      <fieldset class="fieldset">
-        <legend class="legend">Your Info</legend>
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text" required autocomplete="name" placeholder="Fake Person">
 
-        <div class="form__group">
-          <label for="name" class="form__label">Full Name <span class="req" aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="name" class="form__control" placeholder="Jane Doe" autocomplete="name" required>
-        </div>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="fakeemail@fakeemail.com">
 
-        <div class="form__grid-2">
-          <div class="form__group">
-            <label for="email" class="form__label">Email <span class="req" aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" class="form__control" placeholder="fakemail.com" autocomplete="email" required>
-          </div>
-          <div class="form__group">
-            <label for="phone" class="form__label">Phone</label>
-            <input type="tel" id="phone" name="phone" class="form__control" placeholder="(555) 555-5555" inputmode="tel">
-          </div>
-        </div>
-      </fieldset>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555">
 
-      <fieldset class="fieldset">
-        <legend class="legend">Order Details</legend>
+          <label for="date">Pickup Date *</label>
+          <input id="date" name="date" type="date" required>
 
-        <div class="form__group">
-          <label for="product" class="form__label">Cookie Type <span class="req" aria-hidden="true">*</span></label>
-          <select id="product" name="product" class="form__control" required>
-            <option value="" disabled selected>Select a flavor</option>
-            <option>Chocolate Chip</option>
-            <option>Sugar</option>
-            <option>Snickerdoodle</option>
-            <option>Peanut Butter</option>
-            <option>Assorted Box</option>
+          <label for="product">Product Type *</label>
+          <select id="product" name="product" required>
+            <option value="">Select a product</option>
+            <option value="cake">Cake</option>
+            <option value="cupcakes">Cupcakes</option>
+            <option value="cookies">Cookies</option>
+            <option value="dessert-table">Dessert Table</option>
           </select>
+
+          <label for="flavor">Flavor</label>
+          <input id="flavor" name="flavor" type="text" placeholder="Vanilla, Chocolate, Peanut Butter, etc.">
+
+          <label for="dietary">Dietary Preferences</label>
+          <select id="dietary" name="dietary">
+            <option value="">None</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="dairy-free">Dairy-Free</option>
+            <option value="vegan">Vegan</option>
+            <option value="nut-free">Nut-Free</option>
+          </select>
+
+          <label for="quantity">Quantity *</label>
+          <input id="quantity" name="quantity" type="number" min="1" required placeholder="e.g., 24">
+
+          <label for="message">Design Notes</label>
+          <textarea id="message" name="message" rows="5" placeholder="Theme, colors, writing, photo inspiration, etc."></textarea>
+
+          <button class="btn" type="submit" aria-label="Submit custom order form">Submit Form</button>
+        </form>
+      </div>
+
+      <div>
+        <h2>Ready-to-Order Favorites</h2>
+
+        <div class="grid grid--2 order-grid">
+          <article class="card">
+            <img class="card_media" src="cupcakeorderimg.jpg" alt="Dozen frosted cupcakes in a box">
+            <div class="card_body">
+              <h3>Dozen Cupcakes</h3>
+              <p>Variety of flavors! Great for big parties!</p>
+              <button class="btn" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card_media" src="cookieorderimg.jpg" alt="Box of assorted cookies drizzled with chocolate">
+            <div class="card_body">
+              <h3>Cookie Box (24)</h3>
+              <p>Can't pick just one! Try them all in our classic cookie box! Great for sharing (although you may not want to).</p>
+              <button class="btn" type="button">Add to Cart</button>
+            </div>
+          </article>
         </div>
 
-        <div class="form__grid-3">
-          <div class="form__group">
-            <label for="size" class="form__label">Box Size <span class="req" aria-hidden="true">*</span></label>
-            <select id="size" name="size" class="form__control" required>
-              <option value="" disabled selected>Select size</option>
-              <option value="6">6 cookies</option>
-              <option value="12">12 cookies (dozen)</option>
-              <option value="24">24 cookies (two dozen)</option>
-            </select>
-          </div>
+        <p class="section--soft">Cannot do payments as this is a project.</p>
+      </div>
+    </section>
 
-          <div class="form__group">
-            <label for="qty" class="form__label">Number of Boxes <span class="req" aria-hidden="true">*</span></label>
-            <input type="number" id="qty" name="qty" class="form__control" min="1" max="200" step="1" value="1" required>
-          </div>
+    <section aria-label="Popular items &amp; pricing">
+      <p id="tg-menu-desc" class="sr-only">
+        Table lists products with size, price, and order time.
+      </p>
 
-          <div class="form__group">
-            <label for="packaging" class="form__label">Packaging</label>
-            <select id="packaging" name="packaging" class="form__control">
-              <option>Standard Box</option>
-              <option>Gift Box</option>
-              <option>Individually Wrapped</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form__group">
-          <span class="form__label">Dietary Options</span>
-          <div class="checkgroup">
-            <div><input type="checkbox" id="glutenfree" name="diet_glutenfree" value="yes"> <label for="glutenfree">Gluten-free</label></div>
-            <div><input type="checkbox" id="nutfree" name="diet_nutfree" value="yes"> <label for="nutfree">Nut-free</label></div>
-            <div><input type="checkbox" id="vegan" name="diet_vegan" value="yes"> <label for="vegan">Vegan</label></div>
-          </div>
-        </div>
-
-        <div class="form__grid-2">
-          <div class="form__group">
-            <label for="date" class="form__label">Pickup Date <span class="req" aria-hidden="true">*</span></label>
-            <input type="date" id="date" name="pickup_date" class="form__control" required>
-          </div>
-          <div class="form__group">
-            <label for="time" class="form__label">Pickup Time <span class="req" aria-hidden="true">*</span></label>
-            <input type="time" id="time" name="pickup_time" class="form__control" required>
-          </div>
-        </div>
-
-        <div class="form__group">
-          <label for="notes" class="form__label">Notes</label>
-          <textarea id="notes" name="notes" class="form__control" rows="4" placeholder="Allergies, special instructions…"></textarea>
-        </div>
-      </fieldset>
-
-      <fieldset class="fieldset">
-        <legend class="legend">Confirmation</legend>
-        <div class="checkbox">
-          <input type="checkbox" id="agree" name="agree" value="yes" required>
-          <label for="agree">I confirm my details are correct and agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>. <span class="req" aria-hidden="true">*</span></label>
-        </div>
-      </fieldset>
-<div class="form__actions">
-  <button type="submit" class="btn">Place Order</button>
-  <button type="reset" class="btn btn--ghost">Reset</button>
-</div>
-
-    </form>
+      <div class="table-wrap">
+        <table class="tg-menu" aria-describedby="tg-menu-desc">
+          <caption class="tg-caption">The Cookie Girl — Popular Items &amp; Pricing</caption>
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Small</th>
+              <th scope="col">Medium</th>
+              <th scope="col">Large</th>
+              <th scope="col">Lead&nbsp;Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cupcakes (per dozen)</th>
+              <td>$15</td>
+              <td>$25</td>
+              <td>$35</td>
+              <td>2–3 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Cookies (per 24)</th>
+              <td>$25</td>
+              <td>$30</td>
+              <td>$35</td>
+              <td>1–2 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Custom Cake</th>
+              <td>6″ — $30</td>
+              <td>8″ — $50</td>
+              <td>10″ — $70</td>
+              <td>5–7 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Dessert Table (mix)</th>
+              <td>—</td>
+              <td>Starts $100</td>
+              <td>Starts $150</td>
+              <td>7–10 days</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5" class="tg-note">
+                * Base prices shown. Customizations may change final pricing.
+                Please submit the custom order form for an exact quote.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <p>&copy; 2025 The Cookie Girl — All rights reserved.</p>
-    <div class="footer__links" aria-label="Helpful links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="sitemap.html">Sitemap</a>
-    </div>
-  </footer>
+  <p>&copy; 2025 The Cookie Girl — All rights reserved.</p>
+  <div class="footer_links" aria-label="Helpful links">
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="sitemap.html">Sitemap</a>
+  </div>
+</footer>
 </body>
 </html>
+
