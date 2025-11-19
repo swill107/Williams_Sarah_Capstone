@@ -6,70 +6,83 @@
   <meta name="description" content="Contact form, hours, and pickup information.">
   <title>Contact • The Cookie Girl</title>
   <link rel="stylesheet" href="project.css">
+
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header" role="banner">
-    <div class="wrapper brand" aria-label="Site brand">
-      <div class="brand__logo" aria-hidden="true">cg</div>
-      <h1 class="brand__name">The Cookie Girl</h1>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrapper brand">
+    <div class="brand__logo" aria-hidden="true">cg</div>
+    <h1 class="brand__name">The Cookie Girl</h1>
+  </div>
+
+  <nav class="navbar">
+    <ul class="navbar__list wrapper">
+      <li><a class="navbar__link" href="index.html">Home</a></li>
+      <li><a class="navbar__link" href="about.html">About</a></li>
+      <li><a class="navbar__link" href="order.html">Order</a></li>
+      <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
+      <li><a class="navbar__link" href="contact.html">Contact</a></li>
+      <li><a class="navbar__link" href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="main wrapper">
+  <section class="grid grid--2">
+    <div>
+      <h2>Contact Us</h2>
+
+      <form>
+        <label for="cname">Name *</label>
+        <input id="cname" name="cname" type="text" required>
+
+        <label for="cemail">Email *</label>
+        <input id="cemail" name="cemail" type="email" required>
+
+        <label for="cmsg">Message *</label>
+        <textarea id="cmsg" name="cmsg" rows="6" required></textarea>
+
+        <button class="btn" type="submit">Send</button>
+      </form>
     </div>
-    <nav class="navbar" role="navigation" aria-label="Primary">
-      <ul class="navbar__list wrapper">
-        <li><a class="navbar__link" href="index.html">Home</a></li>
-        <li><a class="navbar__link" href="about.html">About</a></li>
-        <li><a class="navbar__link" href="order.html">Order</a></li>
-        <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
-        <li><a class="navbar__link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main id="main" class="main wrapper" role="main">
-    <section class="grid grid--2" aria-label="Contact and location">
-      <div>
-        <h2>Contact Us</h2>
-        <form>
-          <label for="cname">Name *</label>
-          <input id="cname" name="cname" type="text" required placeholder="Your name">
+    <aside class="section--soft">
+      <h3>Business Info</h3>
+      <p><strong>Pickup:</strong> By appointment</p>
+      <p><strong>Email:</strong> fakeemail123@fakemail.com</p>
+      <p><strong>Phone:</strong> (555) 555-5555</p>
 
-          <label for="cemail">Email *</label>
-          <input id="cemail" name="cemail" type="email" required placeholder="you@example.com">
+      <details>
+        <summary>Pickup & Delivery Info</summary>
+        <p>Delivery available in nearby areas. Pickup anywhere local.</p>
+      </details>
 
-          <label for="cmsg">Message *</label>
-          <textarea id="cmsg" name="cmsg" rows="6" required placeholder="How can we help?"></textarea>
+      <h4>Find Us</h4>
+      <iframe title="Google Map location"
+              width="100%" height="220" loading="lazy"
+              src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+    </aside>
+  </section>
+</main>
 
-          <button class="btn" type="submit">Send</button>
-        </form>
-      </div>
-
-      <aside class="section--soft" aria-label="Business details">
-        <h3>Business Info</h3>
-        <p><strong>Pickup:</strong> By appointment </p>
-        <p><strong>Email:</strong> fakeemail123@fakemail.com</p>
-        <p><strong>Phone:</strong> (555) 555-5555</p>
-
-        <details>
-          <summary>Pickup & Delivery Info</summary>
-          <p>Delivery is only available in the surrounding areas fakeCity, fakeCity, fakeCity, pickup can be arranged from anywhere.</p>
-        </details>
-
-        <div>
-          <h4>Find us</h4>
-          <iframe title="Map placeholder" width="100%" height="220" loading="lazy"
-            src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-        </div>
-      </aside>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
   <p>&copy; 2025 The Cookie Girl — All rights reserved.</p>
-  <div class="footer_links" aria-label="Helpful links">
+  <div class="footer_links">
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="sitemap.html">Sitemap</a>
   </div>
 </footer>
+
+<div hidden id="snipcart"
+  data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
+</div>
+
 </body>
 </html>

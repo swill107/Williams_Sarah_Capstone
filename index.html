@@ -3,65 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bakery Website for custom orders, shopping, and recipies.">
+  <meta name="description" content="Bakery Website for custom orders, shopping, and recipes.">
   <title>Home • The Cookie Girl</title>
   <link rel="stylesheet" href="project.css">
+
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header" role="banner">
-    <div class="wrapper brand" aria-label="Site brand">
-      <div class="brand__logo" aria-hidden="true">cg</div>
-      <h1 class="brand__name">The Cookie Girl</h1>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" role="banner">
+  <div class="wrapper brand">
+    <div class="brand__logo" aria-hidden="true">cg</div>
+    <h1 class="brand__name">The Cookie Girl</h1>
+  </div>
+  <nav class="navbar" role="navigation" aria-label="Primary">
+    <ul class="navbar__list wrapper">
+      <li><a class="navbar__link" href="index.html">Home</a></li>
+      <li><a class="navbar__link" href="about.html">About</a></li>
+      <li><a class="navbar__link" href="order.html">Order</a></li>
+      <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
+      <li><a class="navbar__link" href="contact.html">Contact</a></li>
+      <li><a class="navbar__link" href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="main wrapper">
+  <section class="grid grid--2">
+    <div class="section--soft">
+      <h2>Hello! Welcome to The Cookie Girl</h2>
+      <img src="images/heroimg.jpg" alt="Baker arranging pastries"
+           style="border-radius:.75rem; margin-bottom:1rem;">
+      <p>I make cakes, cookies, bread, and pastries. Scroll through my signature recipes and give making one a try! Need something special? Submit a custom order form today!</p>
+      <p><a class="btn" href="order.html">Start a Custom Order</a></p>
     </div>
-    <nav class="navbar" role="navigation" aria-label="Primary">
-      <ul class="navbar__list wrapper">
-        <li><a class="navbar__link" href="index.html">Home</a></li>
-        <li><a class="navbar__link" href="about.html">About</a></li>
-        <li><a class="navbar__link" href="order.html">Order</a></li>
-        <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
-        <li><a class="navbar__link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main id="main" class="main wrapper" role="main">
-    <section class="grid grid--2" aria-label="Welcome and featured products">
-      <div class="section--soft">
-        <h2>Hello! Welcome to The Cookie Girl</h2>
-        <img src="heroimg.jpg" alt="A baker arranging fresh pastries on display" style="border-radius: .75rem; margin-bottom: 1rem;">
-        <p>I make cakes, cookies, bread, and pastries. Scroll through my signature recipes and give making one a try! Need something special? Submit a custom order form today!</p>
-        <p><a class="btn" href="order.html">Start a Custom Order</a></p>
-      </div>
-      <div class="grid grid--2">
-        <article class="card" aria-label="Featured: Cupcakes">
-          <img class="card__media" src="Cupcakesimg.jpg" alt="Vanilla and chocolate cupcakes with frosting">
-          <div class="card__body">
-            <h3>Classic Cupcakes</h3>
-            <p>Soft, fluffy, and full of flavor! Frosted with only the best frostings!</p>
-            <a class="btn" href="order.html">Order Cupcakes</a>
-          </div>
-        </article>
-        <article class="card" aria-label="Featured: Cookies">
-          <img class="card__media" src="cccookiesimg.jpg" alt="Basket of chocolate chip cookies for sale">
-          <div class="card__body">
-            <h3>The Original Cookies</h3>
-            <p>Soft and pillowy chocolate chip, gooey snickerdoodle, and soft peanut butter</p>
-            <a class="btn" href="order.html">Order Cookies</a>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+    <div class="grid grid--2">
+      <article class="card">
+        <img class="card__media" src="images/Cupcakesimg.jpg"
+             alt="Cupcakes on a tray">
+        <div class="card__body">
+          <h3>Classic Cupcakes</h3>
+          <p>Soft, fluffy, and full of flavor.</p>
+          <a class="btn" href="order.html">Order Cupcakes</a>
+        </div>
+      </article>
 
-  <footer class="site-footer" role="contentinfo">
+      <article class="card">
+        <img class="card__media" src="images/cccookiesimg.jpg"
+             alt="Basket of cookies">
+        <div class="card__body">
+          <h3>The Original Cookies</h3>
+          <p>The best cookies you'll ever taste.</p>
+          <a class="btn" href="order.html">Order Cookies</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
   <p>&copy; 2025 The Cookie Girl — All rights reserved.</p>
-  <div class="footer_links" aria-label="Helpful links">
+  <div class="footer_links">
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="sitemap.html">Sitemap</a>
   </div>
 </footer>
+
+<div hidden id="snipcart"
+     data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
+</div>
+
 </body>
 </html>
-

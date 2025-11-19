@@ -6,80 +6,98 @@
   <meta name="description" content="Recipe book with easy reliable recipes and how-to videos.">
   <title>Recipes • The Cookie Girl</title>
   <link rel="stylesheet" href="project.css">
+
+  <!-- Snipcart -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
+  <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header" role="banner">
-    <div class="wrapper brand" aria-label="Site brand">
-      <div class="brand__logo" aria-hidden="true">cg</div>
-      <h1 class="brand__name">The Cookie Girl</h1>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="wrapper brand">
+    <div class="brand__logo" aria-hidden="true">cg</div>
+    <h1 class="brand__name">The Cookie Girl</h1>
+  </div>
+
+  <nav class="navbar" aria-label="Primary">
+    <ul class="navbar__list wrapper">
+      <li><a class="navbar__link" href="index.html">Home</a></li>
+      <li><a class="navbar__link" href="about.html">About</a></li>
+      <li><a class="navbar__link" href="order.html">Order</a></li>
+      <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
+      <li><a class="navbar__link" href="contact.html">Contact</a></li>
+      <li><a class="navbar__link" href="cart.html">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="main wrapper">
+  <section>
+    <h2>Recipe Book</h2>
+    <p>My signature, easy-to-follow, tried and tested recipes</p>
+
+    <div class="grid grid--3">
+
+      <article class="card">
+        <img class="card__media" src="images/cupcakerecipeimg.jpg"
+             alt="Chocolate cupcakes with chocolate buttercream frosting">
+        <div class="card__body">
+          <h3>Chocolate Cupcakes With Chocolate Buttercream</h3>
+          <p>Fluffy and rich with a sweet frosting.</p>
+          <details>
+            <summary>View Recipe</summary>
+            <p><strong>Ingredients:</strong> Flour, sugar, butter, eggs, vanilla, milk, baking powder, salt.</p>
+            <p><strong>Steps:</strong> Whisk dry; cream butter &amp; sugar; add eggs &amp; vanilla; alternate dry/milk; bake 350°F for about 18 min.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card__media" src="images/cookierecipeimg.jpg" 
+             alt="Chocolate chip cookies on a baking tray">
+        <div class="card__body">
+          <h3>Chocolate Chip Cookies</h3>
+          <p>Soft fluffy cookies that are always a hit!</p>
+          <details>
+            <summary>View Recipe</summary>
+            <p><strong>Ingredients:</strong> Flour, brown sugar, butter, egg, vanilla, baking soda, baking powder, salt, dark chocolate chips.</p>
+            <p><strong>Steps:</strong> Cream; add egg; fold dry; chill; bake 350°F for 10–12 min.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="card__media" src="images/sconerecipeimg.jpg"
+             alt="Scones drizzled with glaze">
+        <div class="card__body">
+          <h3>Scones</h3>
+          <p>Sweet flaky scones good for any event!</p>
+          <details>
+            <summary>View Recipe</summary>
+            <p><strong>Ingredients:</strong> Flour, sugar, salt, butter, eggs, buttermilk, baking powder, frozen blueberries, powdered sugar and cream for frosting.</p>
+            <p><strong>Steps:</strong> Combine wet &amp; dry; bake 350°F for 10 minutes; frost when cool.</p>
+          </details>
+        </div>
+      </article>
+
     </div>
-    <nav class="navbar" role="navigation" aria-label="Primary">
-      <ul class="navbar__list wrapper">
-        <li><a class="navbar__link" href="index.html">Home</a></li>
-        <li><a class="navbar__link" href="about.html">About</a></li>
-        <li><a class="navbar__link" href="order.html">Order</a></li>
-        <li><a class="navbar__link" href="recipes.html">Recipes</a></li>
-        <li><a class="navbar__link" href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
+</main>
 
-  <main id="main" class="main wrapper" role="main">
-    <section aria-label="Recipe Book">
-      <h2>Recipe Book</h2>
-      <p>My signature, easy-to-follow, tried and tested recipies</p>
-
-      <div class="grid grid--3">
-        <article class="card">
-          <img class="card__media" src="cupcakerecipeimg.jpg" alt="Chocolate cupcakes with chocolate buttercream frosting">
-          <div class="card__body">
-            <h3>Chocolate Cupcakes With Chocolate Buttercream</h3>
-            <p>Fluffy and rich with a sweet frosting.</p>
-            <details>
-              <summary>View Recipe</summary>
-              <p><strong>Ingredients:</strong> Flour, sugar, butter, eggs, vanilla, milk, baking powder, salt.</p>
-              <p><strong>Steps:</strong> Whisk dry; cream butter &amp; sugar; add eggs &amp; vanilla; alternate dry/milk; bake 350°F for about 18 min.</p>
-            </details>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__media" src="cookierecipeimg.jpg" alt="Chocolate chip cookies">
-          <div class="card__body">
-            <h3>Chocolate Chip Cookies</h3>
-            <p>Soft fluffy cookies that are always a hit!</p>
-            <details>
-              <summary>View Recipe</summary>
-              <p><strong>Ingredients:</strong> Flour, brown sugar, butter, egg, vanilla, baking soda, baking powder, salt, dark chocolate chips.</p>
-              <p><strong>Steps:</strong> Cream; add egg; fold dry; chill; bake 350°F for 10–12 min.</p>
-            </details>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="card__media" src="sconerecipeimg.jpg" alt="Plain scones drizzled with glaze">
-          <div class="card__body">
-            <h3>Scones</h3>
-            <p>Sweet flakey scones good for any event!</p>
-            <details>
-              <summary>View Recipe</summary>
-              <p><strong>Ingredients:</strong> Flour, sugar, salt, butter, eggs, buttermilk, baking powder, frozen blueberries, powdered sugar and cream for frosting</p>
-              <p><strong>Steps:</strong> Combine wet &amp; dry; bake 350°F for 10mins; frost when cool.</p>
-            </details>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
   <p>&copy; 2025 The Cookie Girl — All rights reserved.</p>
-  <div class="footer_links" aria-label="Helpful links">
+  <div class="footer_links">
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
     <a href="sitemap.html">Sitemap</a>
   </div>
 </footer>
+
+<div hidden id="snipcart"
+  data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
+</div>
+
 </body>
 </html>
