@@ -185,5 +185,27 @@
      data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
 </div>
 
+<script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const date = document.getElementById("date").value;
+    const quantity = document.getElementById("quantity").value;
+
+    let errors = [];
+
+    if (!date) {
+      errors.push("Please select a pickup date.");
+    }
+
+    if (quantity <= 0) {
+      errors.push("Quantity must be at least 1.");
+    }
+
+    if (errors.length > 0) {
+      e.preventDefault();
+      alert(errors.join("\n"));
+    }
+  });
+</script>
+
 </body>
 </html>

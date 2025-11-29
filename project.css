@@ -390,3 +390,10 @@ img, svg, video {
   transform: scale(1.05);
 }
 
+/* Recipe Slideshow */
+#recipe-slideshow img {
+  display: none;
+  width: 100%;
+  border-radius: .75rem;
+}
+

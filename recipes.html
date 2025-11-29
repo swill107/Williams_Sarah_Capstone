@@ -7,9 +7,9 @@
   <title>Recipes • The Cookie Girl</title>
   <link rel="stylesheet" href="project.css">
 
-  <!-- Snipcart -->
   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.css" />
   <script async src="https://cdn.snipcart.com/themes/v3.6.0/default/snipcart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +34,11 @@
 </header>
 
 <main id="main" class="main wrapper">
+  <div id="recipe-slideshow">
+  <img src="images/cupcakerecipeimg.jpg" alt="">
+  <img src="images/cookierecipeimg.jpg" alt="">
+  <img src="images/sconerecipeimg.jpg" alt="">
+</div>
   <section>
     <h2>Recipe Book</h2>
     <p>My signature, easy-to-follow, tried and tested recipes</p>
@@ -98,6 +103,23 @@
 <div hidden id="snipcart"
   data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
 </div>
+
+<script>
+$(document).ready(function () {
+  let slides = $("#recipe-slideshow img");
+  let index = 0;
+
+  function showNext() {
+    slides.eq(index).fadeOut(600);
+    index = (index + 1) % slides.length;
+    slides.eq(index).fadeIn(600);
+  }
+
+  slides.eq(0).show();
+  setInterval(showNext, 3000);
+});
+</script>
+
 
 </body>
 </html>

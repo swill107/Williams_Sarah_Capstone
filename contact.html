@@ -84,5 +84,20 @@
   data-api-key="NGU5ODQxZjktODI1NS00NzkzLWIwZjUtYzU0MzNlZTFhYmUwNjM4OTkxMjE4MTg1MjQ0OTM1">
 </div>
 
+<script>
+  const contactForm = document.querySelector("form");
+
+  contactForm.addEventListener("submit", function (e) {
+    const name = document.getElementById("cname").value.trim();
+    const email = document.getElementById("cemail").value.trim();
+    const msg = document.getElementById("cmsg").value.trim();
+
+    if (!name || !email || !msg) {
+      e.preventDefault();
+      alert("Please fill out all required fields");
+    }
+  });
+</script>
+
 </body>
 </html>
